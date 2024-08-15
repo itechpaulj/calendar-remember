@@ -1,0 +1,46 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.6.0",
+        "autoprefixer": "^10.4.19",
+        "axios": "^1.6.4",
+        "eslint": "^8.57.0",
+        "eslint-plugin-react": "^7.34.3",
+        "globals": "^15.8.0",
+        "laravel-vite-plugin": "^1.0.0",
+        "postcss": "^8.4.39",
+        "tailwindcss": "^3.4.4",
+        "vite": "^5.0.0"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.11.4",
+        "@fullcalendar/core": "^6.1.14",
+        "@fullcalendar/daygrid": "^6.1.14",
+        "@fullcalendar/interaction": "^6.1.14",
+        "@fullcalendar/list": "^6.1.14",
+        "@fullcalendar/react": "^6.1.14",
+        "@fullcalendar/timegrid": "^6.1.14",
+        "@reduxjs/toolkit": "^2.2.6",
+        "@table-library/react-table-library": "^4.1.7",
+        "@wojtekmaj/react-daterange-picker": "^6.0.0",
+        "file-saver": "^2.0.5",
+        "jspdf": "^2.5.1",
+        "jspdf-autotable": "^3.8.2",
+        "primeicons": "^7.0.0",
+        "primereact": "^10.7.0",
+        "react": "^18.3.1",
+        "react-date-range": "^2.0.1",
+        "react-dom": "^18.3.1",
+        "react-redux": "^9.1.2",
+        "react-router-dom": "^6.24.1",
+        "react-select": "^5.8.0",
+        "sweetalert2": "^11.12.2",
+        "tippy.js": "^6.3.7",
+        "xlsx": "^0.18.5"
+    }
+}

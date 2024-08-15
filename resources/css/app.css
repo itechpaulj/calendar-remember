@@ -1,0 +1,155 @@
+@layer tailwind-base, primereact, tailwind-utilities;
+/* IMPORTANT: In "styled" mode you must add the PrimeReact Theme here. Do NOT include in "unstyled" mode */
+@import "primereact/resources/themes/lara-light-blue/theme.css";
+@import "primeicons/primeicons.css";
+
+@layer tailwind-base {
+    @tailwind base;
+}
+
+@layer tailwind-utilities {
+    @tailwind components;
+    @tailwind utilities;
+}
+
+body {
+    background-color: #f8fafc;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+    position: fixed;
+    z-index: 9999;
+    width: 45px;
+    aspect-ratio: 0.75;
+    --c: no-repeat linear-gradient(#000 0 0);
+    background: var(--c) 0% 100%, var(--c) 50% 100%, var(--c) 100% 100%;
+    background-size: 20% 65%;
+    animation: l8 1s infinite linear;
+    margin: 0 auto;
+}
+
+@keyframes l8 {
+    16.67% {
+        background-position: 0% 0%, 50% 100%, 100% 100%;
+    }
+    33.33% {
+        background-position: 0% 0%, 50% 0%, 100% 100%;
+    }
+    50% {
+        background-position: 0% 0%, 50% 0%, 100% 0%;
+    }
+    66.67% {
+        background-position: 0% 100%, 50% 0%, 100% 0%;
+    }
+    83.33% {
+        background-position: 0% 100%, 50% 100%, 100% 0%;
+    }
+}
+
+.fc-button-group > button {
+    text-transform: capitalize !important;
+}
+
+.fc-list-event:hover {
+    --fc-list-event-hover-bg-color: none !important;
+}
+
+.fc-header-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+}
+.fc-list-event-dot {
+    display: none;
+}
+
+.fc-day-past {
+    background-color: #cbd5e1 !important;
+    opacity: 70%;
+}
+
+.fc-day-future {
+    background-color: #f8fafc !important;
+    cursor: pointer;
+}
+
+.fc-day-today {
+    cursor: pointer;
+}
+
+.fc-day-future:hover {
+    cursor: pointer;
+    background-color: #475569 !important;
+}
+
+.fc-day-today:hover {
+    cursor: pointer;
+    background-color: #475569 !important;
+}
+
+.tableDefaultTheme .p-datatable-wrapper {
+    @apply rounded-t-md;
+}
+
+.tableDefaultTheme .p-datatable-thead > tr > th {
+    @apply bg-gray-900/70 text-slate-50 items-center;
+}
+
+.tableDefaultTheme .p-datatable-tbody > tr > td {
+    @apply p-4 text-gray-700;
+}
+
+.tableDefaultTheme .p-datatable-tbody > tr:nth-child(even) {
+    @apply bg-gray-100 hover:bg-gray-500 hover:text-white;
+}
+.tableDefaultTheme .p-datatable-tbody > tr:nth-child(odd) {
+    @apply bg-gray-200 hover:bg-gray-500 hover:text-white;
+}
+.p-datatable-header {
+    @apply border-none;
+}
+
+.p-datatable-emptymessage > td {
+    @apply text-center;
+}
+
+.p-paginator-bottom .p-paginator .p-component {
+    @apply rounded-b-md;
+}
+
+.p-column-header-content {
+    @apply flex justify-start items-start text-nowrap;
+}
+
+.deferloading {
+    cursor: default !important;
+    position: relative;
+    display: inline-block;
+    border-radius: 1rem;
+    overflow: hidden;
+    opacity: 0.8;
+}
+.deferloading.inline {
+    display: inline;
+}
+.deferloading:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: 2.2s ease forwards infinite placeHolderShimmer;
+    background: #f2f2f2;
+    background: linear-gradient(-61deg, #f2f2f2 40%, #e1e3e1 50%, #f2f2f2 60%);
+    background-size: 100vw 100%;
+}
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -50vw 0;
+    }
+    100% {
+        background-position: 50vw 0;
+    }
+}
